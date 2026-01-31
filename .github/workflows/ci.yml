@@ -26,7 +26,7 @@ jobs:
         run: apt-get update && apt-get install -y build-essential g++-multilib
       - name: Download Steamworks SDK
         run: |
-          curl -u yancouto:${{ secrets.SDK_TOKEN }} -sL https://raw.githubusercontent.com/yancouto/private-steamworks-sdk/master/steamworks_sdk_163.zip -o sdk.zip
+          curl -u signal_from_the_stars:${{ secrets.SDK_TOKEN }} -sL https://raw.githubusercontent.com/signal_from_the_stars/private-steamworks-sdk/master/steamworks_sdk_163.zip -o sdk.zip
           unzip -q sdk.zip
       - name: Build linux64
         run: make linux64 && mkdir -p build && cp luasteam.so build/linux64_luasteam.so
