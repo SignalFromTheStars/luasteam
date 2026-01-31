@@ -46,7 +46,7 @@ jobs:
         run: git submodule update --init
       - name: Download Steamworks SDK
         run: |
-          curl -u yancouto:${{ secrets.SDK_TOKEN }} -sL https://raw.githubusercontent.com/yancouto/private-steamworks-sdk/master/steamworks_sdk_163.zip -o sdk.zip
+          curl -u SignalFromTheStars:${{ secrets.SDK_TOKEN }} -sL https://raw.githubusercontent.com/SignalFromTheStars/private-steamworks-sdk/master/steamworks_sdk_163.zip -o sdk.zip
           unzip -q sdk.zip
       - name: Build
         run: make osx && mkdir -p build && cp luasteam.so build/osx_luasteam.so
@@ -78,7 +78,7 @@ jobs:
       - name: Download Steamworks SDK
         shell: bash
         run: |
-          curl -u yancouto:${{ secrets.SDK_TOKEN }} -sL https://raw.githubusercontent.com/yancouto/private-steamworks-sdk/master/steamworks_sdk_163.zip -o sdk.zip
+          curl -u SignalFromTheStars:${{ secrets.SDK_TOKEN }} -sL https://raw.githubusercontent.com/SignalFromTheStars/private-steamworks-sdk/master/steamworks_sdk_163.zip -o sdk.zip
           unzip -q sdk.zip
       - name: Build win64
         run: |
