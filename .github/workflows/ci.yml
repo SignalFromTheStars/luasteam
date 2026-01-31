@@ -49,7 +49,7 @@ jobs:
           curl -u SignalFromTheStars:${{ secrets.SDK_TOKEN }} -sL https://raw.githubusercontent.com/SignalFromTheStars/private-steamworks-sdk/master/steamworks_sdk_163.zip -o sdk.zip
           unzip -q sdk.zip
       - name: Build
-        run: make osx && mkdir -p build && cp luasteam.so build/osx_luasteam.so && ls -la
+        run: make osx && mkdir -p build && cp luasteam.so.arm64 build/osx_arm64_luasteam.so && cp luasteam.so.x86_64 build/osx_x86_64_luasteam.so
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
